@@ -1,15 +1,32 @@
-function add(a, b) {
-  return a + b;
+let firstNum = 0;
+let operator;
+let secondNum = 0;
+
+function add(firstNum, secondNum) {
+  return firstNum + secondNum;
 }
 
-function subtract(a, b) {
-  return a - b;
+function subtract(firstNum, secondNum) {
+  return firstNum - secondNum;
 }
 
-function multiply(a, b) {
-  return a * b;
+function multiply(firstNum, secondNum) {
+  return firstNum * secondNum;
 }
 
-function divide(a, b) {
-  return a / b;
+function divide(firstNum, secondNum) {
+  return firstNum / secondNum;
+}
+
+function operate(operator, firstNum, secondNum) {
+  switch (operator) {
+    case "+":
+      return add(firstNum, secondNum);
+    case "-":
+      return subtract(firstNum, secondNum);
+    case "*":
+      return multiply(firstNum, secondNum);
+    case "/":
+      return divide(firstNum, secondNum);
+  }
 }
