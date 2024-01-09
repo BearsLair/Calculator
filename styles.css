@@ -8,4 +8,49 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 50px;
+}
+
+.calculator {
+  padding: 5px;
+  height: 400px;
+  width: 300px;
+  border-radius: 7px;
+  border: 3px solid black;
+  background-color: #ced1cb;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border: 2px solid black;
+  height: 60px;
+  padding: 2px;
+  background-color: #bdb8a8;
+  border-radius: 7px;
+}
+
+.recordedinput {
+  text-align: right;
+  font-size: 15px;
+}
+
+.userinput {
+  text-align: right;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.btn {
+  width: 72px;
+  height: 72px;
+}
+
+.firstrow,
+.secondrow,
+.thirdrow,
+.fourthrow {
+  margin: 5px 0px 5px 0px;
 }
