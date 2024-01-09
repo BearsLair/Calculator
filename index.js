@@ -2,22 +2,25 @@ let firstNum = 0;
 let operator;
 let secondNum = 0;
 
-const sevenBtn = document.querySelector("btn seven");
-const eightBtn = document.querySelector("btn eight");
-const nineBtn = document.querySelector("btn nine");
-const addBtn = document.querySelector("btn add");
-const fourBtn = document.querySelector("btn four");
-const fiveBtn = document.querySelector("btn five");
-const sixBtn = document.querySelector("btn six");
-const subtractBtn = document.querySelector("btn subtract");
-const oneBtn = document.querySelector("btn one");
-const twoBtn = document.querySelector("btn two");
-const threeBtn = document.querySelector("btn three");
-const multiplyBtn = document.querySelector("btn multiply");
-const clearBtn = document.querySelector("btn clear");
-const zeroBtn = document.querySelector("btn zero");
-const equalsBtn = document.querySelector("btn equals");
-const divideBtn = document.querySelector("btn divide");
+let input = "";
+let inputLog = "";
+
+const sevenBtn = document.querySelector(".seven");
+const eightBtn = document.querySelector(".eight");
+const nineBtn = document.querySelector(".nine");
+const addBtn = document.querySelector(".add");
+const fourBtn = document.querySelector(".four");
+const fiveBtn = document.querySelector(".five");
+const sixBtn = document.querySelector(".six");
+const subtractBtn = document.querySelector(".subtract");
+const oneBtn = document.querySelector(".one");
+const twoBtn = document.querySelector(".two");
+const threeBtn = document.querySelector(".three");
+const multiplyBtn = document.querySelector(".multiply");
+const clearBtn = document.querySelector(".clear");
+const zeroBtn = document.querySelector(".zero");
+const equalsBtn = document.querySelector(".equals");
+const divideBtn = document.querySelector(".divide");
 
 function add(firstNum, secondNum) {
   return firstNum + secondNum;
