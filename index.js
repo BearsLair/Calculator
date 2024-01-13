@@ -1,6 +1,7 @@
 let firstNum = 0;
 let operator;
 let secondNum = 0;
+let display = 0;
 
 const sevenBtn = document.querySelector("btn seven");
 const eightBtn = document.querySelector("btn eight");
@@ -18,6 +19,9 @@ const clearBtn = document.querySelector("btn clear");
 const zeroBtn = document.querySelector("btn zero");
 const equalsBtn = document.querySelector("btn equals");
 const divideBtn = document.querySelector("btn divide");
+
+const userinput = document.querySelector(".userinput");
+userinput.innerHTML = display;
 
 function add(firstNum, secondNum) {
   return firstNum + secondNum;
