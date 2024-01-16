@@ -1,9 +1,10 @@
 let firstNum = 0;
-let operator;
+let operator = "";
 let secondNum = 0;
-let display = 0;
+let logDisplay = "";
+let mainDisplay = 0;
+let log = [];
 let userInputArray = [];
-console.log(userInputArray);
 
 const sevenBtn = document.querySelector(".seven");
 sevenBtn.addEventListener("click", () => {
@@ -133,3 +134,17 @@ function operate(operator, firstNum, secondNum) {
       return divide(firstNum, secondNum);
   }
 }
+
+//user presses a number
+//numbers added to input array
+//when user presses on operator button:
+//  (1)array is converted to an integer(float) and stored in firstNum, input array emptied
+//  (2)operator is assigned
+//  (3)number and operator added to log
+//user enters another number
+//numbers added to formerly emptied input array
+//user presses equals
+//  (1)array is converted to an integer(float) and stored in secondNum, input array emptied
+//  (2)operate function called, returning correct result based on operation
+//  (3)display entire expression in log
+//  (3)display the result on calculator display
