@@ -6,6 +6,10 @@ let mainDisplay = 0;
 let log = [];
 let userInputArray = [];
 
+function toMainDisplay() {
+  // TODO;
+}
+
 const sevenBtn = document.querySelector(".seven");
 sevenBtn.addEventListener("click", () => {
   userInputArray.push(7);
@@ -21,12 +25,6 @@ eightBtn.addEventListener("click", () => {
 const nineBtn = document.querySelector(".nine");
 nineBtn.addEventListener("click", () => {
   userInputArray.push(9);
-  console.log(userInputArray);
-});
-
-const addBtn = document.querySelector(".add");
-addBtn.addEventListener("click", () => {
-  userInputArray.push("+");
   console.log(userInputArray);
 });
 
@@ -48,12 +46,6 @@ sixBtn.addEventListener("click", () => {
   console.log(userInputArray);
 });
 
-const subtractBtn = document.querySelector(".subtract");
-subtractBtn.addEventListener("click", () => {
-  userInputArray.push("-");
-  console.log(userInputArray);
-});
-
 const oneBtn = document.querySelector(".one");
 oneBtn.addEventListener("click", () => {
   userInputArray.push(1);
@@ -72,21 +64,33 @@ threeBtn.addEventListener("click", () => {
   console.log(userInputArray);
 });
 
+const zeroBtn = document.querySelector(".zero");
+zeroBtn.addEventListener("click", () => {
+  userInputArray.push(0);
+  console.log(userInputArray);
+});
+
+const addBtn = document.querySelector(".add");
+addBtn.addEventListener("click", () => {
+  userInputArray.push("+");
+  console.log(userInputArray);
+});
+
+const subtractBtn = document.querySelector(".subtract");
+subtractBtn.addEventListener("click", () => {
+  userInputArray.push("-");
+  console.log(userInputArray);
+});
+
 const multiplyBtn = document.querySelector(".multiply");
 multiplyBtn.addEventListener("click", () => {
   userInputArray.push("*");
   console.log(userInputArray);
 });
 
-const clearBtn = document.querySelector(".clear");
-clearBtn.addEventListener("click", () => {
-  userInputArray.push("C");
-  console.log(userInputArray);
-});
-
-const zeroBtn = document.querySelector(".zero");
-zeroBtn.addEventListener("click", () => {
-  userInputArray.push(0);
+const divideBtn = document.querySelector(".divide");
+divideBtn.addEventListener("click", () => {
+  userInputArray.push("/");
   console.log(userInputArray);
 });
 
@@ -96,9 +100,9 @@ equalsBtn.addEventListener("click", () => {
   console.log(userInputArray);
 });
 
-const divideBtn = document.querySelector(".divide");
-divideBtn.addEventListener("click", () => {
-  userInputArray.push("/");
+const clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener("click", () => {
+  userInputArray.push("C");
   console.log(userInputArray);
 });
 
@@ -136,15 +140,17 @@ function operate(operator, firstNum, secondNum) {
 }
 
 //user presses a number
-//numbers added to input array
+//numbers added to input array, numbers converted to integer, then displayed on main display (all done in toMainDisplay())
 //when user presses on operator button:
-//  (1)array is converted to an integer(float) and stored in firstNum, input array emptied
-//  (2)operator is assigned
-//  (3)number and operator added to log
+//  (1)complete integer (from array) stored in firstNum, input array emptied
+//  (2)operator variable is assigned operator button pressed
+//  (3)number and operator added to log, and displayed (?????)
 //user enters another number
-//numbers added to formerly emptied input array
+//numbers added to input array, numbers converted to integer, then displayed on main display (all done in toMainDisplay())
 //user presses equals
-//  (1)array is converted to an integer(float) and stored in secondNum, input array emptied
+//  (1)integer stored in secondNum, input array emptied
 //  (2)operate function called, returning correct result based on operation
 //  (3)display entire expression in log
 //  (3)display the result on calculator display
+
+//Pressing C (Clear), at any time, resets main display to 0, removes log, and restores default variable values
