@@ -1,3 +1,4 @@
+//Variable defaults
 let firstNum = 0;
 let operator = "";
 let secondNum = 0;
@@ -140,15 +141,15 @@ function operate(operator, firstNum, secondNum) {
 }
 
 //user presses a number
-//numbers added to input array, numbers converted to integer, then displayed on main display (all done in toMainDisplay())
+//number added to input array, number(s) in array converted to integer, then displayed on main display (all done in toMainDisplay())
 //when user presses on operator button:
-//  (1)complete integer (from array) stored in firstNum, input array emptied
+//  (1)complete integer (from display) stored in firstNum, input array emptied
 //  (2)operator variable is assigned operator button pressed
 //  (3)number and operator added to log, and displayed (?????)
-//user enters another number
-//numbers added to input array, numbers converted to integer, then displayed on main display (all done in toMainDisplay())
+//user enters another number (former whole/float number removed first)
+//numbers added to input array, number(s) in array converted to integer, then displayed on main display (all done in toMainDisplay())
 //user presses equals
-//  (1)integer stored in secondNum, input array emptied
+//  (1)integer (from display) stored in secondNum, input array emptied
 //  (2)operate function called, returning correct result based on operation
 //  (3)display entire expression in log
 //  (3)display the result on calculator display
