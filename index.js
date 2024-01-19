@@ -1,12 +1,12 @@
 const inputDisplay = document.querySelector(".userinput");
+const log = document.querySelector(".recordedinput");
 
 //Variable defaults
-let firstNum = 0;
+let firstNum = undefined;
 let operator = "";
-let secondNum = 0;
+let secondNum = undefined;
 let logDisplay = "";
 let mainDisplay = 0;
-let log = [];
 let userInputArray = [];
 inputDisplay.textContent = 0;
 
@@ -15,6 +15,7 @@ function toMainDisplay() {
   inputDisplay.textContent = mainDisplay;
 }
 
+//Numbered Buttons
 const sevenBtn = document.querySelector(".seven");
 sevenBtn.addEventListener("click", () => {
   if (userInputArray.length < 16) {
@@ -95,46 +96,65 @@ zeroBtn.addEventListener("click", () => {
   }
 });
 
+//Operators
 const addBtn = document.querySelector(".add");
 addBtn.addEventListener("click", () => {
-  userInputArray.push("+");
-  console.log(userInputArray);
+  // if (firstNum != undefined) {
+  if (firstNum === undefined) {
+    firstNum = mainDisplay;
+    userInputArray = [];
+    operator = "+";
+    log.textContent = firstNum + " " + operator;
+  }
 });
 
 const subtractBtn = document.querySelector(".subtract");
 subtractBtn.addEventListener("click", () => {
-  userInputArray.push("-");
-  console.log(userInputArray);
+  if (firstNum === undefined) {
+    firstNum = mainDisplay;
+    userInputArray = [];
+    operator = "-";
+    log.textContent = firstNum + " " + operator;
+  }
 });
 
 const multiplyBtn = document.querySelector(".multiply");
 multiplyBtn.addEventListener("click", () => {
-  userInputArray.push("*");
-  console.log(userInputArray);
+  if (firstNum === undefined) {
+    firstNum = mainDisplay;
+    userInputArray = [];
+    operator = "*";
+    log.textContent = firstNum + " " + operator;
+  }
 });
 
 const divideBtn = document.querySelector(".divide");
 divideBtn.addEventListener("click", () => {
-  userInputArray.push("/");
-  console.log(userInputArray);
+  if (firstNum === undefined) {
+    firstNum = mainDisplay;
+    userInputArray = [];
+    operator = "/";
+    log.textContent = firstNum + " " + operator;
+  }
 });
 
-const equalsBtn = document.querySelector(".equals");
-equalsBtn.addEventListener("click", () => {
-  userInputArray.push("=");
-  console.log(userInputArray);
-});
+// const equalsBtn = document.querySelector(".equals");
+// equalsBtn.addEventListener("click", () => {
+//   if (firstNum === undefined) {
+//   firstNum = mainDisplay;
+//   }
+// });
 
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => {
-  firstNum = 0;
+  firstNum = undefined;
   operator = "";
-  secondNum = 0;
+  secondNum = undefined;
   logDisplay = "";
   mainDisplay = 0;
-  log = [];
   userInputArray = [];
   inputDisplay.textContent = 0;
+  log.textContent = "";
 });
 
 const userinput = document.querySelector(".userinput");
