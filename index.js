@@ -10,22 +10,6 @@ let userInputArray = [];
 let input = "";
 let inputLog = "";
 
-const sevenBtn = document.querySelector(".seven");
-const eightBtn = document.querySelector(".eight");
-const nineBtn = document.querySelector(".nine");
-const addBtn = document.querySelector(".add");
-const fourBtn = document.querySelector(".four");
-const fiveBtn = document.querySelector(".five");
-const sixBtn = document.querySelector(".six");
-const subtractBtn = document.querySelector(".subtract");
-const oneBtn = document.querySelector(".one");
-const twoBtn = document.querySelector(".two");
-const threeBtn = document.querySelector(".three");
-const multiplyBtn = document.querySelector(".multiply");
-const clearBtn = document.querySelector(".clear");
-const zeroBtn = document.querySelector(".zero");
-const equalsBtn = document.querySelector(".equals");
-const divideBtn = document.querySelector(".divide");
 function toMainDisplay() {
   // TODO;
 }
