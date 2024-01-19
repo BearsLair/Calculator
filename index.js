@@ -1,3 +1,5 @@
+const inputDisplay = document.querySelector(".userinput");
+
 //Variable defaults
 let firstNum = 0;
 let operator = "";
@@ -6,72 +8,91 @@ let logDisplay = "";
 let mainDisplay = 0;
 let log = [];
 let userInputArray = [];
-
-let input = "";
-let inputLog = "";
+inputDisplay.textContent = 0;
 
 function toMainDisplay() {
-  // TODO;
+  mainDisplay = Number(userInputArray.join(""));
+  inputDisplay.textContent = mainDisplay;
 }
 
 const sevenBtn = document.querySelector(".seven");
 sevenBtn.addEventListener("click", () => {
-  userInputArray.push(7);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(7);
+    toMainDisplay();
+  }
 });
 
 const eightBtn = document.querySelector(".eight");
 eightBtn.addEventListener("click", () => {
-  userInputArray.push(8);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(8);
+    toMainDisplay();
+  }
 });
 
 const nineBtn = document.querySelector(".nine");
 nineBtn.addEventListener("click", () => {
-  userInputArray.push(9);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(9);
+    toMainDisplay();
+  }
 });
 
 const fourBtn = document.querySelector(".four");
 fourBtn.addEventListener("click", () => {
-  userInputArray.push(4);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(4);
+    toMainDisplay();
+  }
 });
 
 const fiveBtn = document.querySelector(".five");
 fiveBtn.addEventListener("click", () => {
-  userInputArray.push(5);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(5);
+    toMainDisplay();
+  }
 });
 
 const sixBtn = document.querySelector(".six");
 sixBtn.addEventListener("click", () => {
-  userInputArray.push(6);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(6);
+    toMainDisplay();
+  }
 });
 
 const oneBtn = document.querySelector(".one");
 oneBtn.addEventListener("click", () => {
-  userInputArray.push(1);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(1);
+    toMainDisplay();
+  }
 });
 
 const twoBtn = document.querySelector(".two");
 twoBtn.addEventListener("click", () => {
-  userInputArray.push(2);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(2);
+    toMainDisplay();
+  }
 });
 
 const threeBtn = document.querySelector(".three");
 threeBtn.addEventListener("click", () => {
-  userInputArray.push(3);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(3);
+    toMainDisplay();
+  }
 });
 
 const zeroBtn = document.querySelector(".zero");
 zeroBtn.addEventListener("click", () => {
-  userInputArray.push(0);
-  console.log(userInputArray);
+  if (userInputArray.length < 16) {
+    userInputArray.push(0);
+    toMainDisplay();
+  }
 });
 
 const addBtn = document.querySelector(".add");
@@ -106,8 +127,14 @@ equalsBtn.addEventListener("click", () => {
 
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => {
-  userInputArray.push("C");
-  console.log(userInputArray);
+  firstNum = 0;
+  operator = "";
+  secondNum = 0;
+  logDisplay = "";
+  mainDisplay = 0;
+  log = [];
+  userInputArray = [];
+  inputDisplay.textContent = 0;
 });
 
 const userinput = document.querySelector(".userinput");
